@@ -4,7 +4,7 @@ import AnimeList from '../components/AnimeList'
 const Home = () => {
     return (
         <div>
-            {/* <AnimeList /> */}
+            <AnimeList />
         </div>
     )
 }

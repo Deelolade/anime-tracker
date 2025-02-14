@@ -11,7 +11,8 @@ const SearchBar = () => {
                 <div className=" w-[100%] sm:w-[80%] justify-evenly flex items-center">
                     <input
                         type="text"
-                        placeholder="Search for an anime..."
+                        placeholder="Search for any
+                         anime..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="border-2 border-[#9DB4C0] rounded-xl py-2 sm:py-3 text-xl w-[70%] sm:w-[80%] text-[#e0fbfc] px-5 outline-0  hover:border-[#e0fbfc] "

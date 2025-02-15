@@ -2,10 +2,18 @@
 import Loading from "./Loading";
 import ErrorPage from "./ErrorPage";
 import { SearchContext } from './searchcontext/searchContext'
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const AnimeList = () => {
     const { isError, isLoading, animeList } = useContext(SearchContext)
+
+
+    const saveToLocalStorage = (anime) => {
+        const savedAnime = JSON.parse(localStorage.getItem("saved_anime")) || [];
+        savedAnime.push(anime)
+        localStorage.setItem('saved_anime', JSON.stringify(savedAnime))
+        console.log("Anime Saved", anime)
+    }
     return (
         <div className="p-6 bg-[#253237] text-[#e0fbfc]">
             {isLoading && <Loading />}
@@ -23,6 +31,7 @@ const AnimeList = () => {
                             <p>{anime.title_japanese}</p>
                             <p>Rank: {anime.popularity}</p>
                             <p>Rating: <span className="text-bold">{anime.rating}</span></p>
+                            <button onClick={() => saveToLocalStorage(animeList)}>click</button>
                         </div>
                     ))}
                 </div>

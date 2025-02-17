@@ -16,12 +16,12 @@ const SearchBar = () => {
                         placeholder="Search for any anime..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="border-2 border-[#9DB4C0] rounded-xl py-2 sm:py-3 text-xl w-[70%] sm:w-[90%] text-[#e0fbfc] px-5 outline-0  hover:border-[#e0fbfc]  "
+                        className="border-2 border-[#9DB4C0] rounded-xl py-2 sm:py-3 text-xl w-[70%] sm:w-[90%] text-[#e0fbfc] px-5 outline-0  hover:border-[#e0fbfc] border-solid "
                     />
-                    <button onClick={searchButton} className="py-2 px-4 lg:w-[10%] border-2 rounded-xl border-[#e0fbfc] text-[#e0fbfc]">search</button>
+                    <button onClick={searchButton} className="py-2 px-4 lg:w-[10%] border-2 rounded-xl border-[#e0fbfc] border-solid text-[#e0fbfc]">search</button>
                     </div>
                     <div className=" mt-4 sm:mt-0  grid place-items-center">
-                        <Link to="/watchlist" className="py-2 px-3 border-2 text-center rounded-xl border-[#e0fbfc] text-[#e0fbfc] w-[80%] sm:w-auto">My WatchList</Link>
+                        <Link to="/watchlist" className="py-2 px-3 border-2 text-center rounded-xl border-[#e0fbfc] text-[#e0fbfc] w-[80%] border-solid sm:w-auto">My WatchList</Link>
                     </div>
                 </div>
             </div>

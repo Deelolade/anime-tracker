@@ -34,12 +34,12 @@ const AnimeList = () => {
             {!isLoading && !isError && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-[80%] md:w-[95%] lg:w-[75%] mx-auto ">
                     {animeList?.map((anime, idx) => (
-                        <div key={idx} className="border rounded-lg p-3 shadow border-[#e0fbfc]">
+                        <div key={idx} className="border rounded-lg p-3 shadow border-[#e0fbfc] border-solid">
                             <div className="relative group w-full h-76" onClick={() => saveToLocalStorage(anime)}>
                                 <img
                                     src={anime.images.webp.large_image_url}
                                     alt={anime.title}
-                                    className="w-full h-76 border-2 border-[#e0fbfc] rounded-sm"
+                                    className="w-full h-76 border-2 border-[#e0fbfc] border-solid rounded-sm"
                                 />
                                 <div className="absolute inset-0 bg-black/70 flex rounded-sm justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <h1 className="font-semibold text-xl ">Add to watchlist</h1>
